@@ -4,9 +4,9 @@ const sass = require('gulp-sass')(require('sass'));
 
 
 function buildStyles() {
-    return gulp.src('./build/sass/**/*.scss')
+    return gulp.src('./src/sass/**/*.scss')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest('./build/css'));
   };
   
 function watchers () {
