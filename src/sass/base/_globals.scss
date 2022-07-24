@@ -1,0 +1,27 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body {
+    min-height: 100vh;
+    font-family: v.$font-main;
+    font-weight: v.$medium;
+}
+.container{
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: v.$mobile;
+    width: 95%;
+    @include m.desktop {
+        max-width: v.$desktop;
+    }
+
+}

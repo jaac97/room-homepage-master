@@ -10,7 +10,7 @@ function buildStyles() {
   };
   
 function watchers () {
-    gulp.watch('./sass/base/**/*.scss', buildStyles);
+    gulp.watch('./src/sass/**/*.scss', buildStyles);
 }
 exports.buildStyles = buildStyles;
 exports.default = parallel(watchers);

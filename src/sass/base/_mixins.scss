@@ -1,0 +1,37 @@
+@use 'variables' as v;
+@mixin phone{
+    @media (min-width: v.$mobile){
+        @content;
+    }
+}
+@mixin table {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop){
+         @content;
+    }
+}
+@mixin track {
+    @content;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%; 
+    
+
+}
+@mixin progress {
+   
+}
+
+@mixin thumb {
+    @content;
+    border: none;
+}
+@mixin grid ($columns, $space){
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $space;
+}
