@@ -23,5 +23,7 @@ body {
     @include m.desktop {
         max-width: v.$desktop;
     }
-
+}
+a{
+    text-decoration: none;
 }
