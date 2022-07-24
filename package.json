@@ -1,0 +1,32 @@
+{
+  "name": "room-homepage-master",
+  "version": "1.0.0",
+  "description": "E-commerce page using GULP, SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaac97/room-homepage-master.git"
+  },
+  "keywords": [
+    "SASS",
+    "GULP",
+    "BEM",
+    "JavaScript"
+  ],
+  "author": "Josué Alarcón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaac97/room-homepage-master/issues"
+  },
+  "homepage": "https://github.com/jaac97/room-homepage-master#readme",
+  "devDependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
