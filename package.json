@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jaac97/room-homepage-master#readme",
   "devDependencies": {
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.54.0"
   },
   "dependencies": {
