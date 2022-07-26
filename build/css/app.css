@@ -11,6 +11,7 @@ body {
   min-height: 100vh;
   font-family: "League Spartan", sans-serif;
   font-weight: 500;
+  line-height: 1;
 }
 
 .container {
@@ -342,39 +343,20 @@ template {
   display: none;
 }
 
-.home > * {
-  border: 1px solid crimson;
-}
-
 @media (min-width: 1440px) {
-  .grid__row-1 {
+  .home {
     display: grid;
-    grid-template-columns: 6fr 4fr;
-    height: 60rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .grid__row-2 {
-    display: grid;
-    grid-template-columns: repeat(12, 120px);
-    height: 40rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 53.5rem 26.5rem;
   }
 }
 
 .hero {
-  grid-column: 1/2;
-}
-
-.hero--model-1 {
-  background-image: url("../images/desktop-image-hero-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  grid-column: 1/8;
 }
 
 .informative {
-  grid-column: 2/3;
+  grid-column: 8/13;
 }
 
 .hero-left, .about, .hero-right {
@@ -382,13 +364,78 @@ template {
 }
 
 .hero-left {
-  grid-column: 1/4;
+  grid-column: 1/5;
 }
 
 .about {
-  grid-column: 4/8;
+  grid-column: 5/9;
 }
 
 .hero-right {
-  grid-column: 8/12;
+  grid-column: 9/13;
+}
+
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 5rem 6rem;
+  height: 100%;
+}
+
+.hero--model-1 {
+  background-image: url("../images/desktop-image-hero-1.jpg");
+}
+
+.home__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 36.5rem;
+}
+
+.home__mark {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  font-size: 1.4rem;
+}
+
+.nav__anchor {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+}
+
+.informative {
+  padding: 10rem;
+  position: relative;
+}
+
+.informative__heading {
+  font-size: 4rem;
+  width: 92%;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.informative__text {
+  color: hsl(0deg, 0%, 27%);
+  font-size: 1.5rem;
+}
+
+.informative__content--model-2 {
+  display: none;
+}
+
+.informative__content--model-3 {
+  display: none;
 }
