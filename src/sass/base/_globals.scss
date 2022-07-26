@@ -13,19 +13,22 @@ body {
     font-weight: v.$medium;
     line-height: 1;
 }
-.container{
-    min-height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: v.$mobile;
-    width: 95%;
-    @include m.desktop {
-        max-width: v.$desktop;
+@include m.desktop {
+    .container{
+        min-height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: v.$mobile;
+        width: 95%;
+        @include m.desktop {
+            max-width: v.$desktop;
+        }
     }
 }
+
 a{
     text-decoration: none;
 }

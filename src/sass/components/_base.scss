@@ -8,24 +8,36 @@
     }
 }
 .hero {
+    @include m.desktop {
     grid-column: 1/8;
     height: 100%;
+    }
 }
 .informative{
+    @include m.desktop {
     grid-column: 8/13;
     height: 100%;
+    }
 }
 .hero-left, .about, .hero-right{
+    @include m.desktop {
     grid-row: 2/3;
+    }
 }
 .hero-left{
+    @include m.desktop {
     grid-column: 1/5;
+    }
 }
 .about{
+    @include m.desktop {
     grid-column: 5/9;
+    }
 }
 .hero-right {
+    @include m.desktop {
     grid-column: 9/13;
+    }
 
 }
 .buttons{

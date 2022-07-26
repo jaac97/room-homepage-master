@@ -5,8 +5,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 5rem 6rem;
-    height: 100%;
+    padding: 2rem;
+    height: 36rem;
+    @include m.desktop {
+        padding: 5rem 6rem;
+        height: 100%;
+    }
 }
 
 .hero--model-1{
@@ -18,23 +22,103 @@
     align-items: center;
     justify-content: space-between;
     max-width: 36.5rem;
-;
+
+}
+.home__burger{
+    width: 2rem;
+    height: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    @include m.desktop {
+        display: none;
+    }
+}
+
+.home__burger-span{
+    height: 2px;
+    width: 100%;
+    display: inline-block;
+    background-color: v.$white;
 }
 .home__mark{
     color: v.$white;
     font-weight: v.$medium;
-    margin: 0;
-    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    @include m.desktop {
+        font-size: 3rem;
+        margin: 0;
+    }
 }
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+    display: none;
     height: 100%;
     font-size: 1.4rem;
+    @include m.desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.4rem;
+        gap: 2rem;
+
+    }
 }
 .nav__anchor{
     color: v.$white;
     font-weight: v.$medium;
+}
+/* Mobil Styles to menu */
+.home__content--open{
+    background-color: v.$white;
+    padding: 3rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    transition: background-color .3s ease-in-out;
+    height: 11rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav--show{
+    position: relative;
+    color: v.$black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.nav__anchor--open{
+    color: v.$black;
+}
+.home__burger-span--open{
+    background-color: v.$dark-gray;
+}
+.home__burger--open{
+    position: relative;
+    top: 4px;
+}
+.home__burger-span--open:nth-child(1){
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: absolute;
+
+}
+.home__burger-span--open:nth-child(2){
+    position: absolute;
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.home__burger-span--open:nth-child(3){
+    display: none;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: absolute;
+
 }
