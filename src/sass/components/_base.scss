@@ -1,0 +1,28 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+.home{
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows:53.5rem 26.5rem;
+    }
+}
+.hero {
+    grid-column: 1/8;
+}
+.informative{
+    grid-column: 8/13;
+}
+.hero-left, .about, .hero-right{
+    grid-row: 2/3;
+}
+.hero-left{
+    grid-column: 1/5;
+}
+.about{
+    grid-column: 5/9;
+}
+.hero-right {
+    grid-column: 9/13;
+
+}
