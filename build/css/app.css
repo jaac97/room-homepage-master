@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 375px;
@@ -339,4 +340,55 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.home > * {
+  border: 1px solid crimson;
+}
+
+@media (min-width: 1440px) {
+  .grid__row-1 {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    height: 60rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid__row-2 {
+    display: grid;
+    grid-template-columns: repeat(12, 120px);
+    height: 40rem;
+  }
+}
+
+.hero {
+  grid-column: 1/2;
+}
+
+.hero--model-1 {
+  background-image: url("../images/desktop-image-hero-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.informative {
+  grid-column: 2/3;
+}
+
+.hero-left, .about, .hero-right {
+  grid-row: 2/3;
+}
+
+.hero-left {
+  grid-column: 1/4;
+}
+
+.about {
+  grid-column: 4/8;
+}
+
+.hero-right {
+  grid-column: 8/12;
 }

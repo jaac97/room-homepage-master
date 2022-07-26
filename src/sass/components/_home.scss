@@ -1,0 +1,48 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+.home > *{
+    border: 1px solid crimson;
+}
+
+.grid__row-1{
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        height: 60rem;
+    }
+}
+.grid__row-2{
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(12, 120px);
+        height: 40rem;
+    }
+}
+.hero {
+    grid-column: 1/2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero--model-1{
+    background-image: url('../images/desktop-image-hero-1.jpg');
+  
+}
+.informative{
+    grid-column: 2/3;
+}
+.hero-left, .about, .hero-right{
+    grid-row: 2/3;
+}
+.hero-left{
+    grid-column: 1/4;
+}
+.about{
+    grid-column: 4/8;
+}
+.hero-right {
+    grid-column: 8/12;
+
+}
