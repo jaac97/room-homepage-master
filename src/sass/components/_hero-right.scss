@@ -1,6 +1,12 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
 .hero-right{
+    height: 23.8rem;
     background-image: url('../images/image-about-light.jpg');
     background-size: cover;
-    height: 100%;
     background-repeat: no-repeat;
+    @include m.desktop {
+    height: 100%;
+        
+    }
 }
