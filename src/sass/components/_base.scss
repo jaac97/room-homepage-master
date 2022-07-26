@@ -42,8 +42,14 @@
 }
 .buttons{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: -80px;
+    right: 0;
+    @include m.desktop {
+        top: unset;
+        right: unset;
+        bottom: 0;
+        left: 0;
+    }
 }
 .button{
     background-color: v.$black;
