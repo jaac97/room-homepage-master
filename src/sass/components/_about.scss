@@ -1,0 +1,15 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.about{
+    padding: 7rem 5rem 6rem;
+}
+.about__heading{
+    text-transform: uppercase;
+    font-weight: v.$semibold;
+    letter-spacing: .7rem;
+    max-width: 29rem;
+    font-size: 1.45rem;
+}
+.about__text{
+    color: v.$dark-gray;
+}
