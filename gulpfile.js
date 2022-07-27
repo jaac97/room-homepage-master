@@ -2,7 +2,7 @@ const gulp= require('gulp');
 const {series, parallel}  = require('gulp')
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
-const jpg = require('gulp-jpg');
+
 function buildStyles() {
     return gulp.src('./src/sass/**/*.scss')
       .pipe(sourcemaps.init())
