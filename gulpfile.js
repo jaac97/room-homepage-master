@@ -11,14 +11,15 @@ function buildStyles() {
       .pipe(gulp.dest('./build/css'));
 };
 
-function convertjpg() {
+function convertWebp() {
     return gulp.src('./src/images/**/*')
           .pipe(jpg())
           .pipe(gulp.dest('./build/images'));
 }
+
 function watchers () {
     gulp.watch('./src/sass/**/*.scss', buildStyles);
-    gulp.watch('./src/images/**/*', convertjpg)
+    // gulp.watch('./src/images/**/*', convertWebp)
 
 }
 exports.buildStyles = buildStyles;
