@@ -36,3 +36,147 @@ homeBurger.addEventListener('click', () => {
 
 
 })
+class Slide {
+    constructor(){}
+    next(){
+  /*       const informative = document.querySelector('.informative');
+        const hero = document.querySelector('.hero');
+        const informativeContent = document.querySelector('.informative__content--model-show');
+        let informativeNew = '';
+
+        switch (informativeContent.dataset.id) {
+            case '1':
+                    hero.classList.remove('hero--model-1')
+                    hero.classList.add('hero--model-2')
+
+                    informativeNew = document.querySelector('[data-id="2"]')
+                    informativeNew.classList.remove('informative__content--model-hidden')
+                    informativeNew.classList.add('informative__content--model-show')
+
+                    informativeContent.classList.add('transition--to-left')
+                break;
+                case '2':
+                    hero.classList.remove('hero--model-2')
+                    hero.classList.add('hero--model-3')
+
+                    informativeNew = document.querySelector('[data-id="3"]')
+                    informativeNew.classList.remove('informative__content--model-hidden')
+                    informativeNew.classList.add('informative__content--model-show')
+
+                    informativeContent.classList.add('transition--to-left')
+                break;
+                case '3':
+                    hero.classList.remove('hero--model-3')
+                    hero.classList.add('hero--model-1')
+                    
+                    informativeNew = document.querySelector('[data-id="1"]')
+                    informativeNew.classList.remove('informative__content--model-hidden')
+                    informativeNew.classList.add('informative__content--model-show')
+                    
+                    informativeContent.classList.add('transition--to-left')
+                break;
+        }
+
+        setTimeout(() => {
+
+            informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
+
+            informativeContent.classList.add('informative__content--model-hidden')
+
+        }, 1000) */
+    }
+    prev(){
+        const informative = document.querySelector('.informative');
+        const hero = document.querySelector('.hero');
+        const informativeContent = document.querySelector('.informative__content--model-show');
+        let informativeNew = '';
+        console.log(informativeContent.classList)
+        switch (informativeContent.dataset.id) {
+            case '1':
+                console.log("ejecutando 1")
+
+                    hero.classList.remove('hero--model-1')
+                    hero.classList.add('hero--model-3')
+
+                    informativeNew = document.querySelector('[data-id="3"]')
+                    informativeNew.classList.remove('informative__content--model-hidden')
+                    informativeNew.classList.add('informative__content--model-show')
+
+                    informativeContent.classList.add('transition--to-right')
+               console.log(informativeContent.classList)
+               console.log(informativeNew)
+               console.log(informativeNew.classList)
+               console.log("================")
+
+              setTimeout(() => {
+
+                    informativeContent.classList.remove('informative__content--model-show')
+        
+                    informativeContent.classList.add('informative__content--model-hidden')
+        
+                }, 1000) 
+
+                break;
+                case '2':
+                    console.log("ejecutando 2")
+                    hero.classList.remove('hero--model-2')
+                    hero.classList.add('hero--model-1')
+
+
+                    informativeNew = document.querySelector('[data-id="3"]')
+                    informativeNew.classList.remove('informative__content--model-hidden')
+                    informativeNew.classList.add('informative__content--model-show')
+
+                    informativeContent.classList.add('transition--to-right')
+
+
+                    console.log(informativeContent.classList)
+               console.log(informativeNew)
+
+                    console.log(informativeNew.classList)
+                    console.log("================")
+
+                break;
+                case '3':
+                    console.log("ejecutando 3")
+
+                    hero.classList.remove('hero--model-3')
+                    hero.classList.add('hero--model-2')
+                    
+                    informativeNew = document.querySelector('[data-id="2"]')
+             
+                    
+                    informativeContent.classList.add('transition--to-right')
+
+                setTimeout(() => {
+                    informativeNew.classList.remove('informative__content--model-hidden')
+                    informativeNew.classList.add('informative__content--model-show')
+                }, 1000) 
+     
+                    setTimeout(() => {
+
+                        informativeContent.classList.remove('informative__content--model-show')
+            
+                        informativeContent.classList.add('informative__content--model-hidden')
+            
+                    }, 1000) 
+
+                break;
+        }
+
+    }
+}
+
+
+function eventListener () {
+    const next = document.querySelector('#next');
+    const prev = document.querySelector('#prev');
+    const slide = new Slide()
+    next.addEventListener('click', () => {
+        slide.next();
+    })
+    prev.addEventListener('click', () => {
+        slide.prev();
+    })
+}
+eventListener()
