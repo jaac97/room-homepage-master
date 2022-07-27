@@ -3,13 +3,14 @@
 .informative{
     position: relative;
     padding: 6rem 3rem 7rem;
+    display: flex;
     min-height: 41rem;
+    gap: 3rem;
     @include m.desktop {
         padding: 10rem;
         // nuevo
-        overflow: hidden;
-        display: flex;
         gap: 10rem;
+
     }
 }
 .informative__content{
@@ -20,17 +21,17 @@
 .transition--to-left {
     transform: translateX(-10rem);
     opacity: 0;
-    transition: transform ease-in-out 1s,
-                opacity ease-in-out 1s;
+    transition: transform ease-in-out .5s,
+                opacity ease-in-out .5s;
 }
 .transition--to-right{
     transform: translateX(10rem);
     opacity: 0;
-    transition: transform ease-in-out 1s,
-                opacity ease-in-out 1s;
+    transition: transform ease-in-out .5s,
+                opacity ease-in-out .5s;
 }
 .transition--img{
-    transition: background ease-in-out 1s;
+    transition: all ease-in-out .5s;
 }
 .informative__content--model-show{
     display: block;
