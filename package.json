@@ -23,9 +23,10 @@
   },
   "homepage": "https://github.com/jaac97/room-homepage-master#readme",
   "devDependencies": {
+    "gulp-jpg": "^4.0.1",
+    "gulp-minify-inline": "^1.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-jpg": "^4.0.1",
     "sass": "^1.54.0"
   },
   "dependencies": {
