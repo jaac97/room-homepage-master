@@ -57,7 +57,7 @@ class Slide {
                     setTimeout(() => {
                         hero.classList.remove('transition--img')
 
-                        informativeNew.classList.remove('informative__content--model-hidden')
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-left', 'transition--to-right')
                         informativeNew.classList.add('informative__content--model-show')
 
                         informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
@@ -78,7 +78,8 @@ class Slide {
                     setTimeout(() => {
                         hero.classList.remove('transition--img')
 
-                        informativeNew.classList.remove('informative__content--model-hidden')
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-left', 'transition--to-right')
+
                         informativeNew.classList.add('informative__content--model-show')
 
                         informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
@@ -98,7 +99,8 @@ class Slide {
                     setTimeout(() => {
                         hero.classList.remove('transition--img')
 
-                        informativeNew.classList.remove('informative__content--model-hidden')
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-left', 'transition--to-right')
+
                         informativeNew.classList.add('informative__content--model-show')
 
                         informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
@@ -129,7 +131,7 @@ class Slide {
                 informativeContent.classList.add('transition--to-right')
 
                     setTimeout(() => {
-                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right')
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right', 'transition--to-left')
 
                         informativeNew.classList.add('informative__content--model-show')
 
@@ -149,7 +151,7 @@ class Slide {
                     informativeNew = document.querySelector('[data-id="1"]')
 
                     setTimeout(() => {
-                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right')
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right', 'transition--to-left')
                         informativeNew.classList.add('informative__content--model-show')
 
                         informativeContent.classList.remove('informative__content--model-show')
@@ -171,7 +173,7 @@ class Slide {
 
                     setTimeout(() => {
 
-                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right')
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right', 'transition--to-left')
 
                         informativeNew.classList.add('informative__content--model-show')
 
@@ -198,5 +200,15 @@ function eventListener () {
     prev.addEventListener('click', () => {
         slide.prev();
     })
+    document.addEventListener('keydown', e =>{
+
+         if(e.key === 'ArrowRight') {
+            slide.next();
+         }else if(e.key === 'ArrowLeft'){
+        slide.prev();
+
+         }
+    })
 }
 eventListener()
+//# sourceMappingURL=app.js.map

@@ -2,6 +2,7 @@ const gulp= require('gulp');
 const {series, parallel}  = require('gulp')
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
+const minify = require('gulp-minify');
 
 function buildStyles() {
     return gulp.src('./src/sass/**/*.scss')
@@ -10,6 +11,16 @@ function buildStyles() {
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('./build/css'));
 };
+function minifyJs () {
+    return  gulp.src('src/js/app.js')
+    .pipe(sourcemaps.init())
+    .pipe(minify())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('build/js'))
+
+ 
+       
+}
 
 function convertWebp() {
     return gulp.src('./src/images/**/*')
@@ -23,4 +34,5 @@ function watchers () {
 
 }
 exports.buildStyles = buildStyles;
+exports.minifyJs = minifyJs;
 exports.default = parallel(buildStyles,watchers);
