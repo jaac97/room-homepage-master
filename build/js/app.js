@@ -47,13 +47,15 @@ class Slide {
         switch (informativeContent.dataset.id) {
             case '1':
                     hero.classList.remove('hero--model-1')
-                    hero.classList.add('hero--model-2')
+                    hero.classList.add('hero--model-2', 'transition--img')
+
 
                     informativeNew = document.querySelector('[data-id="2"]')
                     informativeContent.classList.add('transition--to-left')
 
   
                     setTimeout(() => {
+                        hero.classList.remove('transition--img')
 
                         informativeNew.classList.remove('informative__content--model-hidden')
                         informativeNew.classList.add('informative__content--model-show')
@@ -62,18 +64,19 @@ class Slide {
             
                         informativeContent.classList.add('informative__content--model-hidden')
             
-                    }, 1000) 
+                    }, 500) 
 
 
 
                 break;
                 case '2':
                     hero.classList.remove('hero--model-2')
-                    hero.classList.add('hero--model-3')
+                    hero.classList.add('hero--model-3', 'transition--img')
 
                     informativeNew = document.querySelector('[data-id="3"]')
 
                     setTimeout(() => {
+                        hero.classList.remove('transition--img')
 
                         informativeNew.classList.remove('informative__content--model-hidden')
                         informativeNew.classList.add('informative__content--model-show')
@@ -82,17 +85,18 @@ class Slide {
             
                         informativeContent.classList.add('informative__content--model-hidden')
             
-                    }, 1000) 
+                    }, 500) 
 
                     informativeContent.classList.add('transition--to-left')
                 break;
                 case '3':
                     hero.classList.remove('hero--model-3')
-                    hero.classList.add('hero--model-1')
+                    hero.classList.add('hero--model-1', 'transition--img')
                     
                     informativeNew = document.querySelector('[data-id="1"]')
 
                     setTimeout(() => {
+                        hero.classList.remove('transition--img')
 
                         informativeNew.classList.remove('informative__content--model-hidden')
                         informativeNew.classList.add('informative__content--model-show')
@@ -101,7 +105,7 @@ class Slide {
             
                         informativeContent.classList.add('informative__content--model-hidden')
             
-                    }, 1000) 
+                    }, 500) 
                     
                     informativeContent.classList.add('transition--to-left')
                 break;
@@ -133,7 +137,7 @@ class Slide {
             
                         informativeContent.classList.add('informative__content--model-hidden')
             
-                }, 1000) 
+                }, 500) 
 
                 break;
                 case '2':
@@ -151,7 +155,7 @@ class Slide {
                         informativeContent.classList.remove('informative__content--model-show')
                         informativeContent.classList.add('informative__content--model-hidden')
             
-                    }, 1000) 
+                    }, 500) 
       
 
                 break;
@@ -175,7 +179,7 @@ class Slide {
             
                         informativeContent.classList.add('informative__content--model-hidden')
             
-                    }, 1000) 
+                    }, 500) 
 
                 break;
         }
