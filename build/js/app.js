@@ -39,7 +39,7 @@ homeBurger.addEventListener('click', () => {
 class Slide {
     constructor(){}
     next(){
-  /*       const informative = document.querySelector('.informative');
+        const informative = document.querySelector('.informative');
         const hero = document.querySelector('.hero');
         const informativeContent = document.querySelector('.informative__content--model-show');
         let informativeNew = '';
@@ -50,18 +50,39 @@ class Slide {
                     hero.classList.add('hero--model-2')
 
                     informativeNew = document.querySelector('[data-id="2"]')
-                    informativeNew.classList.remove('informative__content--model-hidden')
-                    informativeNew.classList.add('informative__content--model-show')
-
                     informativeContent.classList.add('transition--to-left')
+
+  
+                    setTimeout(() => {
+
+                        informativeNew.classList.remove('informative__content--model-hidden')
+                        informativeNew.classList.add('informative__content--model-show')
+
+                        informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
+            
+                        informativeContent.classList.add('informative__content--model-hidden')
+            
+                    }, 1000) 
+
+
+
                 break;
                 case '2':
                     hero.classList.remove('hero--model-2')
                     hero.classList.add('hero--model-3')
 
                     informativeNew = document.querySelector('[data-id="3"]')
-                    informativeNew.classList.remove('informative__content--model-hidden')
-                    informativeNew.classList.add('informative__content--model-show')
+
+                    setTimeout(() => {
+
+                        informativeNew.classList.remove('informative__content--model-hidden')
+                        informativeNew.classList.add('informative__content--model-show')
+
+                        informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
+            
+                        informativeContent.classList.add('informative__content--model-hidden')
+            
+                    }, 1000) 
 
                     informativeContent.classList.add('transition--to-left')
                 break;
@@ -70,90 +91,85 @@ class Slide {
                     hero.classList.add('hero--model-1')
                     
                     informativeNew = document.querySelector('[data-id="1"]')
-                    informativeNew.classList.remove('informative__content--model-hidden')
-                    informativeNew.classList.add('informative__content--model-show')
+
+                    setTimeout(() => {
+
+                        informativeNew.classList.remove('informative__content--model-hidden')
+                        informativeNew.classList.add('informative__content--model-show')
+
+                        informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
+            
+                        informativeContent.classList.add('informative__content--model-hidden')
+            
+                    }, 1000) 
                     
                     informativeContent.classList.add('transition--to-left')
                 break;
         }
 
-        setTimeout(() => {
 
-            informativeContent.classList.remove('informative__content--model-show','transition--to-left', 'transition--to-right')
-
-            informativeContent.classList.add('informative__content--model-hidden')
-
-        }, 1000) */
     }
     prev(){
         const informative = document.querySelector('.informative');
         const hero = document.querySelector('.hero');
         const informativeContent = document.querySelector('.informative__content--model-show');
         let informativeNew = '';
-        console.log(informativeContent.classList)
+      
         switch (informativeContent.dataset.id) {
             case '1':
-                console.log("ejecutando 1")
-
+              
                     hero.classList.remove('hero--model-1')
                     hero.classList.add('hero--model-3')
-
+                    
                     informativeNew = document.querySelector('[data-id="3"]')
-                    informativeNew.classList.remove('informative__content--model-hidden')
-                    informativeNew.classList.add('informative__content--model-show')
+                informativeContent.classList.add('transition--to-right')
 
-                    informativeContent.classList.add('transition--to-right')
-               console.log(informativeContent.classList)
-               console.log(informativeNew)
-               console.log(informativeNew.classList)
-               console.log("================")
+                    setTimeout(() => {
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right')
 
-              setTimeout(() => {
+                        informativeNew.classList.add('informative__content--model-show')
 
-                    informativeContent.classList.remove('informative__content--model-show')
-        
-                    informativeContent.classList.add('informative__content--model-hidden')
-        
+                        informativeContent.classList.remove('informative__content--model-show')
+            
+                        informativeContent.classList.add('informative__content--model-hidden')
+            
                 }, 1000) 
 
                 break;
                 case '2':
-                    console.log("ejecutando 2")
+            
                     hero.classList.remove('hero--model-2')
                     hero.classList.add('hero--model-1')
 
-
-                    informativeNew = document.querySelector('[data-id="3"]')
-                    informativeNew.classList.remove('informative__content--model-hidden')
-                    informativeNew.classList.add('informative__content--model-show')
-
                     informativeContent.classList.add('transition--to-right')
+                    informativeNew = document.querySelector('[data-id="1"]')
 
+                    setTimeout(() => {
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right')
+                        informativeNew.classList.add('informative__content--model-show')
 
-                    console.log(informativeContent.classList)
-               console.log(informativeNew)
-
-                    console.log(informativeNew.classList)
-                    console.log("================")
+                        informativeContent.classList.remove('informative__content--model-show')
+                        informativeContent.classList.add('informative__content--model-hidden')
+            
+                    }, 1000) 
+      
 
                 break;
                 case '3':
-                    console.log("ejecutando 3")
+                  
 
                     hero.classList.remove('hero--model-3')
                     hero.classList.add('hero--model-2')
                     
                     informativeNew = document.querySelector('[data-id="2"]')
              
-                    
                     informativeContent.classList.add('transition--to-right')
 
-                setTimeout(() => {
-                    informativeNew.classList.remove('informative__content--model-hidden')
-                    informativeNew.classList.add('informative__content--model-show')
-                }, 1000) 
-     
                     setTimeout(() => {
+
+                        informativeNew.classList.remove('informative__content--model-hidden', 'transition--to-right')
+
+                        informativeNew.classList.add('informative__content--model-show')
 
                         informativeContent.classList.remove('informative__content--model-show')
             
