@@ -88,6 +88,28 @@
 .nav__anchor{
     color: v.$white;
     font-weight: v.$medium;
+    position: relative;
+}
+.nav__anchor:hover{
+    transition: all ease 1s;
+
+}
+.nav__anchor::after{
+    transition: all ease 1s;
+
+}
+.nav__anchor:hover::after{
+
+    // box-shadow: 0 5px 0 v.$white;
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+   position: absolute;
+    top: 20px;
+    left: 4px; 
 }
 /* Mobil Styles to menu */
 .home__content--open{

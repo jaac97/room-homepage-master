@@ -77,6 +77,20 @@
         margin-top: 3rem;
         
     }
+    transition: color ease-in-out .3s;
+}
+.informative__anchor:hover {
+    color: v.$dark-gray;
+}
+.informative__anchor:hover .informative__arrow,
+.informative__anchor:hover .informative__arrow,
+.informative__anchor:hover .informative__arrow::before,
+.informative__anchor:hover .informative__arrow::after
+
+
+{
+    background: v.$dark-gray;
+
 }
 .informative__arrow{
     height: 2px;
@@ -85,6 +99,11 @@
     background: v.$black;
     margin-bottom: .2rem;
     position: relative;
+    transition: background ease-in-out .3s;
+}
+.informative__arrow:hover{
+    background: v.$dark-gray;
+
 }
 .informative__arrow::before{
     display: block;
@@ -97,6 +116,7 @@
     transform: rotate(145deg);
     bottom: 0;
 }
+
 .informative__arrow::after{
     display: block;
     height: 1rem;
@@ -118,6 +138,7 @@
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+    padding: 10px;
 }
 .button__arrow--left{
     transform: rotate(135deg);
