@@ -25,6 +25,7 @@ body {
         width: 95%;
         @include m.desktop {
             max-width: v.$desktop;
+            width: 100%;
         }
     }
 }
